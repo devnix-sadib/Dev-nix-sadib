@@ -8,6 +8,8 @@
 
     <title>Sadib's Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
     <style>
         .navbar-transparent {
             background-color: transparent;
@@ -15,27 +17,27 @@
         }
 
         .navbar-solid {
-            background-color: rgba(15, 23, 42, 0.9); /* Slightly transparent slate background */
+            background-color: rgba(15, 23, 42, 0.9);
         }
-        body{
-            height: 1000px;
-            background-color: rgba(11,19,40,255)
 
-;
+        body {
+            background-color: rgba(11, 19, 40, 255);
+            color: white;
         }
-        .logo{
+
+        .logo {
             border: 3px solid rgb(28, 28, 197);
         }
     </style>
 </head>
 
-<body class="">
+<body>
     <!-- Navbar -->
     <header id="navbar" class="p-4 shadow z-40 fixed w-full navbar-transparent">
         <div class="container mx-auto flex items-center justify-between">
             <!-- Logo -->
             <div class="flex items-center">
-                <img src="img/me.jpg" alt="Profile" class=" logo h-12 w-12 rounded-full border">
+                <img src="img/me.jpg" alt="Profile" class="logo h-12 w-12 rounded-full border">
                 <h1 class="text-xl font-bold text-yellow-400 ml-3">Dev-Nix</h1>
             </div>
 
@@ -57,7 +59,7 @@
         </div>
 
         <!-- Mobile Navigation Links -->
-        <div id="mobileMenu" class="hidden bg-slate-700  text-white flex flex-col space-y-4 mt-4 p-4 lg:hidden">
+        <div id="mobileMenu" class="hidden bg-slate-700 text-white flex flex-col space-y-4 mt-4 p-4 lg:hidden">
             <a href="#home" class="hover:text-yellow-400">HOME</a>
             <a href="#about" class="hover:text-yellow-400">ABOUT ME</a>
             <a href="#features" class="hover:text-yellow-400">FEATURES</a>
@@ -65,16 +67,44 @@
             <a href="#contact" class="hover:text-yellow-400">CONTACT</a>
         </div>
     </header>
-    <!--About saction-->
-<div id="about">
-    <div class="flex py-44">
-         <div class="px-20">
-            <p class="salam text-blue-400 text-3xl font-bold  ">Assalamualaikum. I am</p> 
-            <h1 class="text-7xl font-bold text-blue-500">Mohammed <span class="text-yellow-400">Sadib</span></h1>
-             <p class="text-gray-400 text-2xl mt-2">Passionate Fontend Developer</p> 
-             <p class="text-yellow-400 text-4xl mt-4">My motto is,</p> 
-             <p class="text-yellow-400 text-4xl">Col</p> </div> </div>
-</div>
+
+    <!-- Home Section -->
+    <div id="home">
+        <div class="flex py-44">
+            <div class="px-20">
+                <p class="salam text-blue-400 text-3xl font-bold">Assalamualaikum. I am</p>
+                <h1 class="text-7xl font-bold text-blue-500">Mohammed <span class="text-yellow-400">Sadib</span></h1>
+                <p class="text-gray-400 text-2xl mt-2">Passionate Frontend Developer</p>
+                <p class="text-yellow-400 text-4xl mt-4">My motto is,</p>
+                <div class="mt-4">
+                    <span id="animation" class="font-bold text-xl md:text-xl lg:text-5xl text-yellow-400"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+     <div class="text-center text-yellow-400 font-bold  pb-10">
+        <h1 class="text-6xl ">About Me</h1>
+     </div>
+    <div id="about" class="flex text-white space-x-12 pl-72 py-5">
+        <!-- Profile Image -->
+        <div>
+            <img src="img/me.jpg" alt="Profile Picture" class=" logo h-44 w-4h-44 rounded-full ">
+        </div>
+        
+        <!-- About Text -->
+        <div class="font-bold leading-relaxed text-justify max-w-lg">
+            <p class="font-bold text-white text-xl">
+                Hello, my name is <span class="font-bold text-yellow-400">Sadib</span>, a passionate frontend developer from Bangladesh.  
+                Specializing in <span class="font-bold text-blue-400">HTML</span>, <span class="font-bold text-blue-400">CSS</span>, <span class="font-bold text-blue-400">Tailwind</span>, <span class="font-bold text-blue-400">JavaScript</span>, and <span class="font-bold text-blue-400">React</span>.  
+                Dedicated to crafting user-friendly, responsive designs and constantly learning to deliver innovative, scalable, and efficient web solutions.
+            </p>
+        </div>
+    </div>
+    
+    
+    
 
     <script>
         const menuButton = document.getElementById('menuButton');
@@ -95,6 +125,19 @@
                 navbar.classList.add('navbar-transparent');
                 navbar.classList.remove('navbar-solid');
             }
+        });
+
+        // Initialize Typed.js
+        var typed = new Typed("#animation", {
+            strings: ["CODER.", "WEB DEVELOPER.", "LIFELONG LEARNER"],
+            typeSpeed: 50,
+            backSpeed: 80,
+            loop: true,
+            startDelay: 500,
+            backDelay: 1500,
+            fadeOut: true,
+            showCursor: true,
+            cursorChar: '|',
         });
     </script>
 </body>
