@@ -9,6 +9,10 @@
     <title>Sadib's Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        rel="stylesheet"
+    />
 
     <style>
         .navbar-transparent {
@@ -34,6 +38,14 @@
             background-color: #fbbf24; /* Yellow color */
             transition: width 1.5s ease-in-out;
         }
+
+        .contact-icon {
+            transition: transform 0.3s;
+        }
+
+        .contact-icon:hover {
+            transform: scale(1.2);
+        }
     </style>
 </head>
 
@@ -49,10 +61,10 @@
 
             <!-- Navigation Links (Desktop) -->
             <nav class="hidden lg:flex space-x-8 text-yellow-400 text-sm font-medium">
-                <a href="#home" class="hover:text-blue-600">HOME</a>
-                <a href="#about" class="hover:text-blue-600">ABOUT ME</a>
-                <a href="#skills" class="hover:text-blue-600">SKILLS</a>
-                <a href="#contact" class="hover:text-blue-600">CONTACT</a>
+                <a href="#home" class="hover:text-blue-600 smooth-scroll">HOME</a>
+                <a href="#about" class="hover:text-blue-600 smooth-scroll">ABOUT ME</a>
+                <a href="#skills" class="hover:text-blue-600 smooth-scroll">SKILLS</a>
+                <a href="#contact" class="hover:text-blue-600 smooth-scroll">CONTACT</a>
             </nav>
 
             <!-- Hamburger Menu Button (Mobile) -->
@@ -65,10 +77,10 @@
 
         <!-- Mobile Navigation Links -->
         <div id="mobileMenu" class="hidden bg-gray-900 text-white flex flex-col space-y-4 mt-4 p-4 lg:hidden">
-            <a href="#home" class="hover:text-yellow-400">HOME</a>
-            <a href="#about" class="hover:text-yellow-400">ABOUT ME</a>
-            <a href="#skills" class="hover:text-yellow-400">SKILLS</a>
-            <a href="#contact" class="hover:text-yellow-400">CONTACT</a>
+            <a href="#home" class="hover:text-yellow-400 smooth-scroll">HOME</a>
+            <a href="#about" class="hover:text-yellow-400 smooth-scroll">ABOUT ME</a>
+            <a href="#skills" class="hover:text-yellow-400 smooth-scroll">SKILLS</a>
+            <a href="#contact" class="hover:text-yellow-400 smooth-scroll">CONTACT</a>
         </div>
     </header>
 
@@ -88,24 +100,26 @@
     </div>
 
     <!-- About Section -->
-    <div class="text-center text-yellow-400 font-bold pb-10">
-        <h1 class="text-4xl md:text-6xl">About Me</h1>
-    </div>
-    <div id="about" class="flex flex-col md:flex-row text-white space-y-6 md:space-y-0 md:space-x-12 px-6 md:px-72 py-5">
-        <!-- Profile Image -->
-        <div class="order-1 md:order-1 mb-6 md:mb-0 flex justify-center">
-            <img src="img/me.jpg" alt="Profile Picture" class="logo h-44 w-44 rounded-full">
+    <main>
+        <div id="about" class="text-center text-yellow-400 font-bold pb-10">
+            <h1 class="text-4xl md:text-6xl">About Me</h1>
         </div>
+        <div id="about" class="flex flex-col md:flex-row text-white space-y-6 md:space-y-0 md:space-x-12 px-6 md:px-72 py-5">
+            <!-- Profile Image -->
+            <div class="order-1 md:order-1 mb-6 md:mb-0 flex justify-center">
+                <img src="img/me.jpg" alt="Profile Picture" class="logo h-44 w-44 rounded-full">
+            </div>
 
-        <!-- About Text -->
-        <div class="order-2 md:order-2 font-bold leading-relaxed text-justify max-w-lg">
-            <p class="font-bold text-white text-lg md:text-xl">
-                Hello, my name is <span class="font-bold text-yellow-400">Sadib</span>, a passionate frontend developer from Bangladesh.  
-                Specializing in <span class="font-bold text-blue-400">HTML</span>, <span class="font-bold text-blue-400">CSS</span>, <span class="font-bold text-blue-400">Tailwind</span>, <span class="font-bold text-blue-400">JavaScript</span>, and <span class="font-bold text-blue-400">React</span>.  
-                Dedicated to crafting user-friendly, responsive designs and constantly learning to deliver innovative, scalable, and efficient web solutions.
-            </p>
+            <!-- About Text -->
+            <div class="order-2 md:order-2 font-bold leading-relaxed text-justify max-w-lg">
+                <p class="font-bold text-white text-lg md:text-xl">
+                    Hello, my name is <span class="font-bold text-yellow-400">Sadib</span>, a passionate frontend developer from Bangladesh.
+                    Specializing in <span class="font-bold text-blue-400">HTML</span>, <span class="font-bold text-blue-400">CSS</span>, <span class="font-bold text-blue-400">Tailwind</span>, <span class="font-bold text-blue-400">JavaScript</span>, and <span class="font-bold text-blue-400">React</span>.
+                    Dedicated to crafting user-friendly, responsive designs and constantly learning to deliver innovative, scalable, and efficient web solutions.
+                </p>
+            </div>
         </div>
-    </div>
+    </main>
 
     <!-- Skills Section -->
     <div id="skills" class="max-w-3xl mx-auto p-6 mt-20">
@@ -146,6 +160,28 @@
                 </div>
                 <span class="ml-4 text-sm">75%</span>
             </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="text-center py-16">
+        <h1 class="text-4xl font-bold text-yellow-400 mb-8">Let's Connect</h1>
+        <div class="flex justify-center space-x-6">
+            <a href="https://www.facebook.com/DevNixSadib" target="_blank" class="contact-icon">
+                <i class="fab fa-facebook-f text-3xl "></i>
+            </a>
+            <a href="https://www.instagram.com/devnixsadib/" target="_blank" class="contact-icon">
+                <i class="fab fa-instagram text-4xl"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mohammed-sadib-7b757a341/" target="_blank" class="contact-icon">
+                <i class="fab fa-linkedin-in text-4xl "></i>
+            </a>
+            <a href="https://github.com/devnix-sadib" target="_blank" class="contact-icon">
+                <i class="fab fa-github text-4xl "></i>
+            </a>
+            <a href="mailto:mohammedsadib8@gmail.com" target="_blank" class="contact-icon">
+                <i class="fas fa-envelope text-4xl "></i>
+            </a>
         </div>
     </div>
 
@@ -199,6 +235,16 @@
         }, { threshold: 0.5 });
 
         observer.observe(skillsSection);
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.smooth-scroll').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
     </script>
 </body>
 
